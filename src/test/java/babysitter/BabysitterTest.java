@@ -20,4 +20,10 @@ public class BabysitterTest {
 		assertEquals(babysitter.isValidStartTime(startTime), true);
 	}
 
+	@Test
+	public void makeSureMyBedtimeIsTenPm() {
+		Babysitter babysitter = new Babysitter();
+		int bedTime = 22;
+		assertEquals(babysitter.getBedTime(), 22);
+	}
 }
