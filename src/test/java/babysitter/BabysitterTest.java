@@ -6,9 +6,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class BabysitterTest {
-	
+
 	Babysitter babysitter;
-	
+
 	@Before
 	public void setup() {
 		babysitter = new Babysitter();
@@ -23,5 +23,10 @@ public class BabysitterTest {
 	public void whenStartTimeIsAfterFivePm() {
 		int startTime = 18;
 		assertEquals(true, babysitter.isValidStartTime(startTime));
+	}
+
+	@Test
+	public void makeSureMyBedtimeIsTenPm() {
+		assertEquals(22, babysitter.getBedtime());
 	}
 }
