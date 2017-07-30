@@ -19,11 +19,14 @@ public class Babysitter {
 	public int getPayment(int startTime, int endTime) {
 		int totalPayment = 0;
 		int hourlyPayment = 0;
-		for (int currentTime = startTime; currentTime <= endTime; currentTime++) {
+		for(int currentTime = startTime; currentTime < endTime ||
+                (endTime > 0 && endTime <= 4 && (currentTime - 24) < endTime); currentTime++) {
 			if (currentTime <= bedtime) {
 				hourlyPayment = 12;
 			} else if (currentTime >= bedtime && currentTime <= 24) {
 				hourlyPayment = 8;
+			} else {
+				hourlyPayment = 16;
 			}
 		}
 
