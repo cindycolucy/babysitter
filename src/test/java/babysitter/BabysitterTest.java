@@ -19,7 +19,8 @@ public class BabysitterTest {
 		int startTime = 16;
 		assertEquals(false, babysitter.isValidStartTime(startTime));
 	}
-
+	
+	@Test
 	public void whenStartTimeIsAfterFivePm() {
 		int startTime = 18;
 		assertEquals(true, babysitter.isValidStartTime(startTime));
