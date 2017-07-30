@@ -34,4 +34,10 @@ public class BabysitterTest {
 	public void fromStartTimeToBedtimePaidCorrectly() {
 		assertEquals(12, babysitter.getPayment(17, 22));
 	}
+	
+	@Test
+	public void fromBedtimeToMidnightPaidCorrectly() {
+		assertEquals(8, babysitter.getPayment(22, 24));
+	}
 }
+
