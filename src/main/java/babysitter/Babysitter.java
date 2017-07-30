@@ -2,7 +2,6 @@ package babysitter;
 
 public class Babysitter {
 
-	//private int startTime = 17;
 	private int bedtime = 22;
 
 	public boolean isValidStartTime(int currentTime) {
