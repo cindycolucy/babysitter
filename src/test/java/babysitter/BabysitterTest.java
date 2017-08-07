@@ -15,15 +15,15 @@ public class BabysitterTest {
 	}
 
 	@Test
-	public void whenStartTimeIsBeforeFivePm() {
+	public void whenStartTimeIsBeforeFivePmStartTimeIsFalse() {
 		int startTime = 16;
-		assertEquals(false, babysitter.isValidStartTime(startTime));
+		assertFalse(babysitter.isValidStartTime(startTime));
 	}
 	
 	@Test
-	public void whenStartTimeIsAfterFivePm() {
+	public void whenStartTimeIsAfterFivePmStartTimeIsTrue() {
 		int startTime = 18;
-		assertEquals(true, babysitter.isValidStartTime(startTime));
+		assertTrue(babysitter.isValidStartTime(startTime));
 	}
 
 	@Test
